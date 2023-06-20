@@ -15,7 +15,7 @@ resource "google_compute_subnetwork" "my-subnetwork2" {
   name          = "my-subnetwork-2"
   network       = google_compute_network.my-network2.self_link
   region        = "us-central1"
-  ip_cidr_range = "10.0.0.0/24"
+  ip_cidr_range = "10.0.0.0/16"
 }
 #Create FW
 resource "google_compute_firewall" "my-firewall2" {
@@ -25,7 +25,6 @@ resource "google_compute_firewall" "my-firewall2" {
   allow {
     protocol = "TCP"
     ports    = ["80", "444"]
-
   }
   source_ranges = ["0.0.0.0/0"]
 }

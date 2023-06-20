@@ -1,4 +1,4 @@
 (
-python.exe my-buildtrigger.py %1
+python.exe my-subprocess.py %1
 pause
 )
