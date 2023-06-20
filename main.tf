@@ -24,7 +24,7 @@ resource "google_compute_firewall" "my-firewall2" {
 
   allow {
     protocol = "UDP"
-    ports    = ["80", "443"]
+    ports    = ["80", "444"]
 
   }
   source_ranges = ["0.0.0.0/0"]
