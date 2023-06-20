@@ -23,7 +23,7 @@ resource "google_compute_firewall" "my-firewall2" {
   network = google_compute_network.my-network2.self_link
 
   allow {
-    protocol = "UDP"
+    protocol = "TCP"
     ports    = ["80", "444"]
 
   }
